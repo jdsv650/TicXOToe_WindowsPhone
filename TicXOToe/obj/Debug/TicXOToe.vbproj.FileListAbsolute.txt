@@ -1,0 +1,14 @@
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\App.g.i.vb
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\ApplicationIcon.png
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\Background.png
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\TicXOToe.dll
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\TicXOToe.pdb
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\TicXOToe.xml
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\AppManifest.xaml
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\Bin\Debug\TicXOToe.xap
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\MainPage.g.i.vb
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\TicXOToe.g.resources
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\TicXOToe.dll
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\TicXOToe.xml
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\TicXOToe.pdb
+c:\users\james\documents\visual studio 2012\Projects\TicXOToe\TicXOToe\obj\Debug\XapCacheFile.xml
