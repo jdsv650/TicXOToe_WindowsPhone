@@ -6,7 +6,15 @@ TicXOToe
 </name>
 </assembly>
 <members>
-<member name="M:TicXOToe.MainPage.InitializeComponent">
+<member name="M:TicXOToe.Slingshot.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:TicXOToe.MainPage.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:TicXOToe.HomePage.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>

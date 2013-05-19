@@ -1,0 +1,14 @@
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\Bin\Release\TicXOToe.dll
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\Bin\Release\TicXOToe.pdb
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\Bin\Release\TicXOToe.xml
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\Bin\Release\AppManifest.xaml
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\Bin\Release\TicXOToe.xap
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\App.g.i.vb
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\HomePage.g.i.vb
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\MainPage.g.i.vb
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\Slingshot.g.i.vb
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\TicXOToe.g.resources
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\TicXOToe.dll
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\TicXOToe.xml
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\TicXOToe.pdb
+C:\Users\James\Documents\Visual Studio 2012\Projects\TicXOToe\TicXOToe\obj\Release\XapCacheFile.xml

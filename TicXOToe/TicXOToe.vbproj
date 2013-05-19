@@ -93,37 +93,68 @@
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HomePage.xaml.vb">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.vb">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Slingshot.xaml.vb">
+      <DependentUpon>Slingshot.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Slingshot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\AppManifest.xml" />
+    <None Include="My Project\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\WMAppManifest.xml" />
+    <None Include="TicXOToe_2013_05_19_13_32_36.sap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\arrowcircleleft.png" />
-    <Content Include="Images\o.png" />
-    <Content Include="Images\x.png" />
-    <Content Include="Images\xobackground.png" />
+    <Content Include="Images\beachsand.png" />
+    <Content Include="Images\beanbag.png" />
+    <Content Include="Images\poolO.png" />
+    <Content Include="Images\poolWater.png" />
+    <Content Include="Images\poolWaterWithXO.png" />
+    <Content Include="Images\poolX.png" />
+    <Content Include="Images\SlingShots\poolO.png" />
+    <Content Include="Images\SlingShots\poolX.png" />
+    <Content Include="Images\SlingShots\slingshot1.png" />
+    <Content Include="Images\SlingShots\slingshot10.png" />
+    <Content Include="Images\SlingShots\slingshot2.png" />
+    <Content Include="Images\SlingShots\slingshot3.png" />
+    <Content Include="Images\SlingShots\slingshot4.png" />
+    <Content Include="Images\SlingShots\slingshot5.png" />
+    <Content Include="Images\SlingShots\slingshot6.png" />
+    <Content Include="Images\SlingShots\slingshot7.png" />
+    <Content Include="Images\SlingShots\slingshot8.png" />
+    <Content Include="Images\SlingShots\slingshot9.png" />
+    <Content Include="Images\stickman_80.png" />
+    <Content Include="Images\stickmenWithSlingshots_2.png" />
+    <Content Include="Images\stickmen_2.png" />
+    <Content Include="Images\ticxotoe_768.png" />
     <Content Include="SplashScreenImage.jpg" />
+    <Content Include="xo_app_icon_wp7.png" />
+    <Content Include="xo_tile_wp7.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />

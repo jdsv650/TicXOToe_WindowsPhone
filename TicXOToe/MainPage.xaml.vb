@@ -9,34 +9,46 @@ Partial Public Class MainPage
     Dim isPlayerX As Boolean = True
     Dim level As Integer = 1 '0,1,2 start at Medium
     Dim rand As New Random()
+    Dim xobackground As String
+    Dim oImg, xImg As String
 
     ' Constructor
     Public Sub New()
         InitializeComponent()
+
+        xobackground = "Images/poolWater.png"
+        oImg = "Images/poolO.png"
+        xImg = "Images/poolX.png"
+
         InitializeBoard()
     End Sub
 
     Public Sub InitializeBoard()
 
+        If (CType(Application.Current, App).gametype = 1) Then
+            isVersusComp = True
+        Else
+            isVersusComp = False
+        End If
         WinLabel.Visibility = Windows.Visibility.Collapsed
         ResetButton.Visibility = Windows.Visibility.Collapsed
-        vsCompCeckbox.Visibility = Windows.Visibility.Visible
-        If (isVersusComp = True) Then
+
+        If (CType(Application.Current, App).gametype = 1) Then
             LevelButton.Visibility = Windows.Visibility.Visible
         Else
             LevelButton.Visibility = Windows.Visibility.Collapsed
         End If
         turnOnButtons()
 
-        Pos1_1_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos1_2_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos1_3_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos2_1_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos2_2_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos2_3_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos3_1_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos3_2_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
-        Pos3_3_Img.Source = New BitmapImage(New Uri("Images/xobackground.png", UriKind.Relative))
+        Pos1_1_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos1_2_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos1_3_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos2_1_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos2_2_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos2_3_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos3_1_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos3_2_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
+        Pos3_3_Img.Source = New BitmapImage(New Uri(xobackground, UriKind.Relative))
 
         ReDim tictac(2, 2)
 
@@ -46,7 +58,7 @@ Partial Public Class MainPage
             Next
         Next
 
-        isPlayerX = True
+        ' isPlayerX = True
 
     End Sub
 
@@ -57,43 +69,43 @@ Partial Public Class MainPage
         If (level = 2) Then
             If (tictac(2, 1) = "X" And tictac(1, 2) = "X" And tictac(2, 2) = "-") Then
                 tictac(2, 2) = "O"
-                Pos3_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos3_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(1, 1) = "-") Then
                 tictac(1, 1) = "O"
-                Pos2_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos2_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(0, 0) = "-" And (Not tictac(0, 2) = "X" Or Not tictac(2, 0) = "X")) Then
                 tictac(0, 0) = "O"
-                Pos1_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos1_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(2, 2) = "-" And (Not tictac(0, 2) = "X" Or Not tictac(2, 0) = "X")) Then
                 tictac(2, 2) = "O"
-                Pos3_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos3_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(2, 0) = "-" And (Not tictac(0, 0) = "X" Or Not tictac(2, 2) = "X")) Then
                 tictac(2, 0) = "O"
-                Pos3_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos3_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(0, 2) = "-" And (Not tictac(0, 0) = "X" Or Not tictac(2, 2) = "X")) Then
                 tictac(0, 2) = "O"
-                Pos1_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos1_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(1, 0) = "-") Then
                 tictac(1, 0) = "O"
-                Pos2_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos2_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(2, 1) = "-") Then
                 tictac(2, 1) = "O"
-                Pos3_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos3_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(1, 2) = "-") Then
                 tictac(1, 2) = "O"
-                Pos2_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos2_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
 
             ElseIf (tictac(0, 1) = "-") Then
                 tictac(0, 1) = "O"
-                Pos1_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                Pos1_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
             Else
                 showWin("T")
             End If
@@ -173,7 +185,6 @@ Partial Public Class MainPage
         Dim message As String
 
         turnOffButtons()
-        vsCompCeckbox.Visibility = Windows.Visibility.Collapsed
         WinLabel.Visibility = Windows.Visibility.Visible
         LevelButton.Visibility = Windows.Visibility.Collapsed
         ResetButton.Visibility = Windows.Visibility.Visible
@@ -189,6 +200,8 @@ Partial Public Class MainPage
         End If
 
         WinLabel.Text = message
+
+        WinLabel.Visibility = Windows.Visibility.Visible
     End Sub
 
     Function checkIfWon(ByVal letter As Char) As Integer
@@ -249,31 +262,31 @@ Partial Public Class MainPage
 
                         'block
                         If (row = 0 And col = 0) Then
-                            Pos1_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos1_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 0 And col = 1) Then
-                            Pos1_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos1_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 0 And col = 2) Then
-                            Pos1_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos1_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 1 And col = 0) Then
-                            Pos2_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos2_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 1 And col = 1) Then
-                            Pos2_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos2_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 1 And col = 2) Then
-                            Pos2_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos2_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 2 And col = 0) Then
-                            Pos3_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos3_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 2 And col = 1) Then
-                            Pos3_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos3_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         If (row = 2 And col = 2) Then
-                            Pos3_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                            Pos3_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                         End If
                         Return (1)
                     End If
@@ -343,7 +356,7 @@ Partial Public Class MainPage
         Else  '// versus computer
 
             makeMove(row, col, "X")
-             tictac(row, col) = "X"  ' /* make move for 'X' */
+            tictac(row, col) = "X"  ' /* make move for 'X' */
         End If
 
         If (isVersusComp = True And level = 2) Then
@@ -393,27 +406,27 @@ Partial Public Class MainPage
 
             If (row = 0) Then
                 If (col = 0) Then
-                    Pos1_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos1_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 ElseIf (col = 1) Then
-                    Pos1_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos1_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 ElseIf (col = 2) Then
-                    Pos1_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos1_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 End If
             ElseIf (row = 1) Then
                 If (col = 0) Then
-                    Pos2_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos2_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 ElseIf (col = 1) Then
-                    Pos2_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos2_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 ElseIf (col = 2) Then
-                    Pos2_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos2_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 End If
             ElseIf (row = 2) Then
                 If (col = 0) Then
-                    Pos3_1_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos3_1_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 ElseIf (col = 1) Then
-                    Pos3_2_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos3_2_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 ElseIf (col = 2) Then
-                    Pos3_3_Img.Source = New BitmapImage(New Uri("Images/o.png", UriKind.Relative))
+                    Pos3_3_Img.Source = New BitmapImage(New Uri(oImg, UriKind.Relative))
                 End If
             End If
 
@@ -421,27 +434,27 @@ Partial Public Class MainPage
 
 		   If (row = 0) Then
                 If (col = 0) Then
-                    Pos1_1_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos1_1_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 ElseIf (col = 1) Then
-                    Pos1_2_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos1_2_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 ElseIf (col = 2) Then
-                    Pos1_3_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos1_3_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 End If
             ElseIf (row = 1) Then
                 If (col = 0) Then
-                    Pos2_1_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos2_1_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 ElseIf (col = 1) Then
-                    Pos2_2_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos2_2_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 ElseIf (col = 2) Then
-                    Pos2_3_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos2_3_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 End If
             ElseIf (row = 2) Then
                 If (col = 0) Then
-                    Pos3_1_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos3_1_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 ElseIf (col = 1) Then
-                    Pos3_2_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos3_2_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 ElseIf (col = 2) Then
-                    Pos3_3_Img.Source = New BitmapImage(New Uri("Images/x.png", UriKind.Relative))
+                    Pos3_3_Img.Source = New BitmapImage(New Uri(xImg, UriKind.Relative))
                 End If
             End If
         End If
@@ -463,17 +476,17 @@ Partial Public Class MainPage
     End Function
 
 
-    Private Sub vsCompCeckbox_Checked(sender As Object, e As RoutedEventArgs) Handles vsCompCeckbox.Checked, vsCompCeckbox.Unchecked
-        If vsCompCeckbox.IsChecked Then
-            isVersusComp = True
-            InitializeBoard()
-        Else
-            isVersusComp = False
-            InitializeBoard()
-        End If
-    End Sub
+    ' Private Sub vsCompCeckbox_Checked(sender As Object, e As RoutedEventArgs) Handles vsCompCeckbox.Checked, vsCompCeckbox.Unchecked
+    '      If vsCompCeckbox.IsChecked Then
+    '          isVersusComp = True
+    '          InitializeBoard()
+    '      Else
+    '          isVersusComp = False
+    '           InitializeBoard()
+    '       End If
+    '   End Sub
 
-    
+
 
     Private Sub Pos1_1_Click(sender As Object, e As RoutedEventArgs) Handles Pos1_1.Click
         GetUserMove(11)

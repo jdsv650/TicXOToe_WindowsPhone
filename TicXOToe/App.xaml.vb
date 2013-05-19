@@ -1,6 +1,8 @@
 ﻿Partial Public Class App
     Inherits Application
 
+    Public gametype As Integer
+
     ''' <summary>
     ''' Provides easy access to the root frame of the Phone Application.
     ''' </summary>

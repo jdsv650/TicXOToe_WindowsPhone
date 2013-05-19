@@ -14,16 +14,17 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/beachsand.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="TicXOToe" Style="{StaticResource PhoneTextNormalStyle}" HorizontalAlignment="Center" Foreground="#FF2615D6" Height="35" FontSize="24" Margin="184,0,183,0"/>
-        </StackPanel>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="12,70,12,10" Grid.RowSpan="2">
@@ -35,7 +36,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos1_1_Img"  Source="Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos1_1_Img"  Source="Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos1_2" HorizontalAlignment="Left" Margin="185,150,0,0" VerticalAlignment="Top" Width="85" Height="85">
                 <Button.Template>
@@ -45,7 +46,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos1_2_Img" Source="Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos1_2_Img" Source="Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos1_3"  HorizontalAlignment="Left" Margin="290,150,0,0" VerticalAlignment="Top" Width="85" Height="85">
                 <Button.Template>
@@ -55,7 +56,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos1_3_Img" Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos1_3_Img" Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos2_1"  HorizontalAlignment="Left" Margin="80,255,0,0" VerticalAlignment="Top" Width="85" Height="85" RenderTransformOrigin="0.71,0.316">
                 <Button.Template>
@@ -65,7 +66,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos2_1_Img" Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos2_1_Img" Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos2_2"  HorizontalAlignment="Left" Margin="185,255,0,0" VerticalAlignment="Top" Width="85" Height="85">
                 <Button.Template>
@@ -75,7 +76,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos2_2_Img" Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos2_2_Img" Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos2_3"  HorizontalAlignment="Left" Margin="290,255,0,0" VerticalAlignment="Top" Width="85" Height="85">
                 <Button.Template>
@@ -85,7 +86,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos2_3_Img" Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos2_3_Img" Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos3_1"  HorizontalAlignment="Left" Margin="80,360,0,0" VerticalAlignment="Top" Width="85" Height="85" RenderTransformOrigin="0.486,-0.117">
                 <Button.Template>
@@ -95,7 +96,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos3_1_Img"  Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos3_1_Img"  Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos3_2"  HorizontalAlignment="Left" Margin="185,360,0,0" VerticalAlignment="Top" Width="85" Height="85">
                 <Button.Template>
@@ -105,7 +106,7 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos3_2_Img" Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos3_2_Img" Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
             <Button x:Name="Pos3_3"  HorizontalAlignment="Left" Margin="290,360,0,0" VerticalAlignment="Top" Width="85" Height="85" RenderTransformOrigin="0.552,0.177">
                 <Button.Template>
@@ -115,12 +116,11 @@
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>
-                <Image x:Name="Pos3_3_Img" Source="/Images/xobackground.png" Stretch="UniformToFill" />
+                <Image x:Name="Pos3_3_Img" Source="/Images/poolWater.png" Stretch="UniformToFill" />
             </Button>
-            <CheckBox x:Name="vsCompCeckbox" Content="Versus Computer" HorizontalAlignment="Left" Margin="134,-19,0,0" VerticalAlignment="Top" Height="65" IsChecked="True"/>
-            <TextBlock x:Name="WinLabel" HorizontalAlignment="Center" Margin="80,-19,67,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="309" Foreground="#FF2615D6" FontSize="36"/>
-            <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Margin="134,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.296,0.115" Width="194"/>
-            <Button x:Name="LevelButton" Content="Medium" HorizontalAlignment="Left" Margin="134,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.296,0.115" Width="194"/>
+            <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Margin="134,506,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.296,0.115" Width="194" Foreground="Black"/>
+            <TextBlock x:Name="WinLabel" Margin="107,58,110,0" TextWrapping="Wrap" Text="Cat's Game" VerticalAlignment="Top" FontSize="48" Foreground="#FB000000" HorizontalAlignment="Center"/>
+            <Button x:Name="LevelButton" Content="Medium" HorizontalAlignment="Center" Margin="150,47,156,0" VerticalAlignment="Top" Foreground="Black" Width="150"/>
 
         </Grid>
         <Button Content="Button" HorizontalAlignment="Left" Height="16" Margin="-101,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="22"/>
